@@ -1,0 +1,14 @@
+DOM
+documento object model
+Seleccionar elementos de la pagina 
+BOM
+Browser object model 
+mainupalr el navegador web y obtener datos 
+Eventos 
+Algo sucede en la pagina web (captura de movientos)
+--------(Bloque de ejercicios)
+JSON
+LocalStorage
+Peticiones Asincronas
+Fechas y funciones
+

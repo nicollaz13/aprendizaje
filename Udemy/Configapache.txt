@@ -1,0 +1,34 @@
+para configurar el apache
+se debe de entrar a la carpeta conf
+y configurar 
+httpd.conf
+listen (puerto 80 y  81)
+Include conf/extra/httpd-vhosts.conf (activar libreria)
+httpd-vhost.conf (VirtualHost)
+<VirtualHost *:80>
+    ##ServerAdmn webmaster@dummy-host2.example.com
+    DocumentRoot "C:\SEVENET\www"
+    ##ServerName dummy-host2.example.com
+    ##ErrorLog "logs/dummy-host2.example.com-error.log"
+    ##CustomLog "logs/dummy-host2.example.com-access.log" common
+</VirtualHost>
+<Directory "C:\SEVENET\www">
+      Options Indexes FollowSymLinks
+      AllowOverride None
+	  #Order Allow,Deny
+      Require all granted
+</Directory>
+<VirtualHost *:81>
+    ServerAdmin webmaster@dummy-host2.example.com
+    DocumentRoot "C:\Users\PRACTICANTE\Downloads\Udemy\PHP"
+    ServerName localhost
+     # Configuración para ejecutar archivos PHP
+    <Directory "C:\Users\PRACTICANTE\Downloads\Udemy\PHP">
+        Options Indexes FollowSymLinks
+        AllowOverride All
+        Require all granted
+        AddType application/x-httpd-php .php
+    </Directory>
+</VirtualHost>
+
+
